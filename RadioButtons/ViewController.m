@@ -13,6 +13,8 @@
     PJRadioButtonSet *topSet;
     PJRadioButtonSet *centerSet;
     PJRadioButtonSet *bottomSet;
+    
+    __weak IBOutlet UILabel *result;
 }
 @end
 
@@ -29,8 +31,7 @@
 
 
 - (IBAction)getValues:(id)sender {
-    
-    NSLog(@"\nBtnset Value : %@\nCenterSet value : %@ \nBottomButton Value: %@",topSet.value ,centerSet.value,bottomSet.value);
+    result.text = [NSString stringWithFormat:@"Topset Value: %@\nCenterset Value: %@ \nBottomset Value: %@",topSet.value,centerSet.value,bottomSet.value];
 }
 
 @end

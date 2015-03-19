@@ -77,6 +77,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQ4-7N-NWU">
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16F-29-zOx" customClass="PJRadioButton">
                                 <rect key="frame" x="260" y="215" width="80" height="30"/>
                                 <state key="normal" title="Top Mid">
@@ -87,10 +92,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="8dH-tF-2yG" firstAttribute="trailing" secondItem="vbk-sM-X76" secondAttribute="trailing" id="1Kj-xy-a4q"/>
+                            <constraint firstItem="few-Zd-lWh" firstAttribute="centerX" secondItem="NQ4-7N-NWU" secondAttribute="centerX" id="2KC-v7-TtY"/>
                             <constraint firstItem="8dH-tF-2yG" firstAttribute="centerY" secondItem="IWW-Y5-Ygu" secondAttribute="centerY" id="5Lu-Lv-R87"/>
                             <constraint firstItem="few-Zd-lWh" firstAttribute="top" secondItem="IWW-Y5-Ygu" secondAttribute="bottom" constant="40" id="5cG-S7-vIP"/>
                             <constraint firstItem="d9e-FF-JW5" firstAttribute="width" secondItem="IWW-Y5-Ygu" secondAttribute="width" id="7Nx-xm-YZI"/>
                             <constraint firstItem="IWW-Y5-Ygu" firstAttribute="top" secondItem="16F-29-zOx" secondAttribute="bottom" constant="40" id="ACb-vK-cqd"/>
+                            <constraint firstItem="NQ4-7N-NWU" firstAttribute="top" secondItem="few-Zd-lWh" secondAttribute="bottom" constant="8" id="HAM-OM-cbR"/>
                             <constraint firstItem="9Tp-MM-8gX" firstAttribute="top" secondItem="16F-29-zOx" secondAttribute="top" id="HkL-qo-3X5"/>
                             <constraint firstItem="8dH-tF-2yG" firstAttribute="width" secondItem="IWW-Y5-Ygu" secondAttribute="width" id="KjV-Bf-AlT"/>
                             <constraint firstItem="IWW-Y5-Ygu" firstAttribute="centerX" secondItem="few-Zd-lWh" secondAttribute="centerX" id="MtT-2i-36H"/>
@@ -117,6 +124,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="result" destination="NQ4-7N-NWU" id="RJh-Uk-XJB"/>
                         <outletCollection property="bottomRadioButtonCollections" destination="few-Zd-lWh" id="SIZ-Fw-MwF"/>
                         <outletCollection property="bottomRadioButtonCollections" destination="vbk-sM-X76" id="zYB-vg-h6S"/>
                         <outletCollection property="bottomRadioButtonCollections" destination="3F4-Xe-Zbo" id="SSA-a5-VNb"/>
