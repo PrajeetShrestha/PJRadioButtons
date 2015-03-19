@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PJRadioButton.h"
 #import "PJRadioButtonSet.h"
 @interface ViewController : UIViewController
 
