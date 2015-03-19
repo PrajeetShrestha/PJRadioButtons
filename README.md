@@ -30,7 +30,7 @@ PJRadioButtonSet.h, PJRadioButtonSet.m , PJRadioButton.h , PJRadioButton.h , PJR
 }
 ```
 
-*Note: Demo project was tested in Xcode 6.2*
+*Note: You can download the zip file or clone the repo and run the project to test the demo. The library files are also there. Demo project was tested in Xcode 6.2*
    
 
 
