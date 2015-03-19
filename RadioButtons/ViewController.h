@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PJRadioButtonSet.h"
 @interface ViewController : UIViewController
 
+
+@property (strong, nonatomic) IBOutletCollection(PJRadioButton) NSArray *topRadioButtonCollections;
+
+
+@property (strong, nonatomic) IBOutletCollection(PJRadioButton) NSArray *centerRadioButtonCollections;
+
+@property (strong, nonatomic) IBOutletCollection(PJRadioButton) NSArray *bottomRadioButtonCollections;
 
 @end
 

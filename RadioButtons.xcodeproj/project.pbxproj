@@ -14,6 +14,8 @@
 		B66C4F8D1AB146CF004A3227 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B66C4F8C1AB146CF004A3227 /* Images.xcassets */; };
 		B66C4F901AB146CF004A3227 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B66C4F8E1AB146CF004A3227 /* LaunchScreen.xib */; };
 		B66C4F9C1AB146D0004A3227 /* RadioButtonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B66C4F9B1AB146D0004A3227 /* RadioButtonsTests.m */; };
+		B6D4A1361ABAC787006EF0ED /* PJRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D4A1331ABAC787006EF0ED /* PJRadioButton.m */; };
+		B6D4A1371ABAC787006EF0ED /* PJRadioButtonSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D4A1351ABAC787006EF0ED /* PJRadioButtonSet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		B66C4F951AB146D0004A3227 /* RadioButtonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadioButtonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B66C4F9A1AB146D0004A3227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B66C4F9B1AB146D0004A3227 /* RadioButtonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadioButtonsTests.m; sourceTree = "<group>"; };
+		B6D4A1321ABAC787006EF0ED /* PJRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJRadioButton.h; sourceTree = "<group>"; };
+		B6D4A1331ABAC787006EF0ED /* PJRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJRadioButton.m; sourceTree = "<group>"; };
+		B6D4A1341ABAC787006EF0ED /* PJRadioButtonSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJRadioButtonSet.h; sourceTree = "<group>"; };
+		B6D4A1351ABAC787006EF0ED /* PJRadioButtonSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJRadioButtonSet.m; sourceTree = "<group>"; };
+		B6D4A1381ABAC7A8006EF0ED /* PJRadioConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PJRadioConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 		B66C4F731AB146CF004A3227 = {
 			isa = PBXGroup;
 			children = (
+				B6D4A1311ABAC73B006EF0ED /* PJRadioButton */,
 				B66C4F7E1AB146CF004A3227 /* RadioButtons */,
 				B66C4F981AB146D0004A3227 /* RadioButtonsTests */,
 				B66C4F7D1AB146CF004A3227 /* Products */,
@@ -117,6 +125,18 @@
 				B66C4F9A1AB146D0004A3227 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B6D4A1311ABAC73B006EF0ED /* PJRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				B6D4A1341ABAC787006EF0ED /* PJRadioButtonSet.h */,
+				B6D4A1351ABAC787006EF0ED /* PJRadioButtonSet.m */,
+				B6D4A1321ABAC787006EF0ED /* PJRadioButton.h */,
+				B6D4A1331ABAC787006EF0ED /* PJRadioButton.m */,
+				B6D4A1381ABAC7A8006EF0ED /* PJRadioConstants.h */,
+			);
+			path = PJRadioButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +242,8 @@
 				B66C4F881AB146CF004A3227 /* ViewController.m in Sources */,
 				B66C4F851AB146CF004A3227 /* AppDelegate.m in Sources */,
 				B66C4F821AB146CF004A3227 /* main.m in Sources */,
+				B6D4A1361ABAC787006EF0ED /* PJRadioButton.m in Sources */,
+				B6D4A1371ABAC787006EF0ED /* PJRadioButtonSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +436,7 @@
 				B66C4FA11AB146D0004A3227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B66C4FA21AB146D0004A3227 /* Build configuration list for PBXNativeTarget "RadioButtonsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +445,7 @@
 				B66C4FA41AB146D0004A3227 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,117 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9e-FF-JW5" customClass="PJRadioButton">
+                                <rect key="frame" x="16" y="215" width="80" height="30"/>
+                                <state key="normal" title="Top Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16F-29-zOx" customClass="PJRadioButton">
+                                <rect key="frame" x="260" y="215" width="80" height="30"/>
+                                <state key="normal" title="Top Mid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Tp-MM-8gX" customClass="PJRadioButton">
+                                <rect key="frame" x="504" y="215" width="80" height="30"/>
+                                <state key="normal" title="Top Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3F4-Xe-Zbo" customClass="PJRadioButton">
+                                <rect key="frame" x="16" y="355" width="80" height="30"/>
+                                <state key="normal" title="Bot Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="few-Zd-lWh" customClass="PJRadioButton">
+                                <rect key="frame" x="260" y="355" width="80" height="30"/>
+                                <state key="normal" title="Bot Mid">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbk-sM-X76" customClass="PJRadioButton">
+                                <rect key="frame" x="504" y="355" width="80" height="30"/>
+                                <state key="normal" title="Bot Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H77-fD-cE7">
+                                <rect key="frame" x="263" y="550" width="74" height="30"/>
+                                <state key="normal" title="Get Values">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N8s-AK-0ja"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dH-tF-2yG" customClass="PJRadioButton">
+                                <rect key="frame" x="504" y="285" width="80" height="30"/>
+                                <state key="normal" title="Right">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-Y5-Ygu" customClass="PJRadioButton">
+                                <rect key="frame" x="260" y="285" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="S1e-ly-KRh"/>
+                                </constraints>
+                                <state key="normal" title="Center">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeQ-NM-bHD" customClass="PJRadioButton">
+                                <rect key="frame" x="16" y="285" width="80" height="30"/>
+                                <state key="normal" title="Left">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dH-tF-2yG" firstAttribute="trailing" secondItem="vbk-sM-X76" secondAttribute="trailing" id="1Kj-xy-a4q"/>
+                            <constraint firstItem="8dH-tF-2yG" firstAttribute="centerY" secondItem="IWW-Y5-Ygu" secondAttribute="centerY" id="5Lu-Lv-R87"/>
+                            <constraint firstItem="few-Zd-lWh" firstAttribute="top" secondItem="IWW-Y5-Ygu" secondAttribute="bottom" constant="40" id="5cG-S7-vIP"/>
+                            <constraint firstItem="d9e-FF-JW5" firstAttribute="width" secondItem="IWW-Y5-Ygu" secondAttribute="width" id="7Nx-xm-YZI"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="top" secondItem="16F-29-zOx" secondAttribute="bottom" constant="40" id="ACb-vK-cqd"/>
+                            <constraint firstItem="9Tp-MM-8gX" firstAttribute="top" secondItem="16F-29-zOx" secondAttribute="top" id="HkL-qo-3X5"/>
+                            <constraint firstItem="8dH-tF-2yG" firstAttribute="width" secondItem="IWW-Y5-Ygu" secondAttribute="width" id="KjV-Bf-AlT"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="centerX" secondItem="few-Zd-lWh" secondAttribute="centerX" id="MtT-2i-36H"/>
+                            <constraint firstItem="zeQ-NM-bHD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NFK-hS-tTq"/>
+                            <constraint firstItem="few-Zd-lWh" firstAttribute="centerY" secondItem="vbk-sM-X76" secondAttribute="centerY" id="NvL-zF-GBH"/>
+                            <constraint firstItem="few-Zd-lWh" firstAttribute="centerY" secondItem="3F4-Xe-Zbo" secondAttribute="centerY" id="Q8R-Xo-7k6"/>
+                            <constraint firstAttribute="centerX" secondItem="H77-fD-cE7" secondAttribute="centerX" id="QYq-1I-vzD"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="centerY" secondItem="zeQ-NM-bHD" secondAttribute="centerY" id="Umj-nk-Msd"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="zeQ-NM-bHD" secondAttribute="width" id="V7V-q9-U2J"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="vbk-sM-X76" secondAttribute="width" id="W0V-wU-IJK"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="few-Zd-lWh" secondAttribute="width" id="YCN-B0-1qp"/>
+                            <constraint firstItem="zeQ-NM-bHD" firstAttribute="leading" secondItem="3F4-Xe-Zbo" secondAttribute="leading" id="bMf-n9-dUp"/>
+                            <constraint firstItem="d9e-FF-JW5" firstAttribute="top" secondItem="16F-29-zOx" secondAttribute="top" id="cvo-w5-yyk"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="16F-29-zOx" secondAttribute="width" id="ebd-cv-CPS"/>
+                            <constraint firstItem="8dH-tF-2yG" firstAttribute="trailing" secondItem="9Tp-MM-8gX" secondAttribute="trailing" id="exF-9r-nXA"/>
+                            <constraint firstItem="8dH-tF-2yG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="feR-MG-7BB"/>
+                            <constraint firstAttribute="centerY" secondItem="IWW-Y5-Ygu" secondAttribute="centerY" id="kmj-DK-aR8"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="centerX" secondItem="16F-29-zOx" secondAttribute="centerX" id="knP-gl-vRf"/>
+                            <constraint firstItem="d9e-FF-JW5" firstAttribute="leading" secondItem="zeQ-NM-bHD" secondAttribute="leading" id="mUg-me-gRD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H77-fD-cE7" secondAttribute="bottom" constant="20" id="prK-6i-Alu"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="3F4-Xe-Zbo" secondAttribute="width" id="vNq-LS-iqP"/>
+                            <constraint firstItem="IWW-Y5-Ygu" firstAttribute="width" secondItem="9Tp-MM-8gX" secondAttribute="width" id="x2f-st-U77"/>
+                            <constraint firstAttribute="centerX" secondItem="IWW-Y5-Ygu" secondAttribute="centerX" id="z6t-LP-8Dd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="bottomRadioButtonCollections" destination="few-Zd-lWh" id="SIZ-Fw-MwF"/>
+                        <outletCollection property="bottomRadioButtonCollections" destination="vbk-sM-X76" id="zYB-vg-h6S"/>
+                        <outletCollection property="bottomRadioButtonCollections" destination="3F4-Xe-Zbo" id="SSA-a5-VNb"/>
+                        <outletCollection property="centerRadioButtonCollections" destination="zeQ-NM-bHD" id="n3m-9g-R3W"/>
+                        <outletCollection property="centerRadioButtonCollections" destination="IWW-Y5-Ygu" id="o1b-Cs-res"/>
+                        <outletCollection property="centerRadioButtonCollections" destination="8dH-tF-2yG" id="zpj-gO-Fgm"/>
+                        <outletCollection property="topRadioButtonCollections" destination="d9e-FF-JW5" id="kXa-gB-q8U"/>
+                        <outletCollection property="topRadioButtonCollections" destination="16F-29-zOx" id="bug-42-9ct"/>
+                        <outletCollection property="topRadioButtonCollections" destination="9Tp-MM-8gX" id="LJY-4N-HEe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
