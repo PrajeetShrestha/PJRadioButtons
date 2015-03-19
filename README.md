@@ -29,6 +29,8 @@ PJRadioButtonSet.h, PJRadioButtonSet.m , PJRadioButton.h , PJRadioButton.h , PJR
 
 }
 ```
+
+*Note: Demo project was tested in Xcode 6.2*
    
 
 
