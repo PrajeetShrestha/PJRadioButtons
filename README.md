@@ -12,7 +12,7 @@ PJRadioButtonSet.h, PJRadioButtonSet.m , PJRadioButton.h , PJRadioButton.h , PJR
 2. Add UIButtons from the interface builder to a viewcontroller in storyboard.
 
 3. Select all the buttons and change the class of button to PJRadioButton from the interface builder. (Select the button, select the identity inspector and change the class to custom class ```PJRadioButton```
-4. Create a outset collections for the buttons that you want to be a part of ```PJRadioButtonSet```. Connect all buttons to the collection outlet in a ViewController.
+4. Create a outset collections for the buttons that you want to be a part of ```PJRadioButtonSet```. Connect all buttons to the collection outlet in a ViewController.h
 
    ```@property (strong, nonatomic) IBOutletCollection(PJRadioButton) NSArray *radioButtonCollection;```
    
