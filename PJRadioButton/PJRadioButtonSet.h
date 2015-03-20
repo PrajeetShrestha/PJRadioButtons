@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PJRadioButton.h"
-#import "PJRadioConstants.h"
+
 
 @interface PJRadioButtonSet : NSObject
 

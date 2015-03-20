@@ -28,8 +28,6 @@
         self.initialBtnList=[[NSMutableArray alloc]initWithArray:buttons];
         
         [self initialState];
-        
-        
     }
     return self;
 }
@@ -37,7 +35,10 @@
 {
     for (PJRadioButton *btn in initialBtnList)
     {
-        [btn inactiveState];
+        //[btn highlightedBorderInactiveState];
+        //[btn buttonWithBeizerShadowInactiveState];
+        //[btn buttonWithShadowInactive];
+        [btn buttonWithCircularSelectionInactive];
         
         [btn addTarget:self action:@selector(pushNpop:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -46,38 +47,50 @@
 }
 -(void)pushNpop:(UIButton *)sender
 {
-    if ([inactiveBtns containsObject:sender])
+    if ([activeBtns lastObject] != NULL)
     {
-        if ([activeBtns lastObject]!=NULL)
-        {
-            [inactiveBtns addObject:[activeBtns lastObject]];
-            
-            [activeBtns removeAllObjects];
-        }
-        [activeBtns addObject:sender];
+        [inactiveBtns addObject:[activeBtns lastObject]];
         
-        UIButton *btn=[activeBtns lastObject];
+        [activeBtns removeAllObjects];
+    }
+    
+    [activeBtns addObject:sender];
+    
+    [self setActiveStateForSelectedButtonAndSetValue:sender];
+    
+    [inactiveBtns removeObject:sender];
+    
+    [self setInactiveStateForInactiveButtons];
+    
+}
+
+-(void)setActiveStateForSelectedButtonAndSetValue:(id)sender
+{
+    PJRadioButton *activebutton = (PJRadioButton *)sender;
+    
+    activebutton.userInteractionEnabled=NO;
+    
+    //[activebutton highlightedBorderActiveState];
+    //[activebutton buttonWithBeizerShadowActiveState];
+    [activebutton buttonWithCircularSelectionActive];
+    
+    value = activebutton.titleLabel.text;
+}
+
+
+-(void)setInactiveStateForInactiveButtons
+{
+    for (PJRadioButton *btn in inactiveBtns)
+    {
+        //[btn highlightedBorderInactiveState];
+        //[btn buttonWithBeizerShadowInactiveState];
+        //[btn  buttonWithShadowInactive];
+        [btn buttonWithCircularSelectionInactive];
         
-        value=btn.titleLabel.text;
-        
-        [inactiveBtns removeObject:sender];
-        
-        
-        for (UIButton *btn in inactiveBtns)
-        {
-            [(PJRadioButton *)btn inactiveState];
-            
-            btn.userInteractionEnabled=YES;
-        }
-        
-        for (UIButton *btn in activeBtns)
-        {
-            btn.userInteractionEnabled=NO;
-            
-            [(PJRadioButton *)btn activeState];
-        }
+        btn.userInteractionEnabled=YES;
     }
 }
+
 
 
 @end

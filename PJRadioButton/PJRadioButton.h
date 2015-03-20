@@ -7,12 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PJRadioConstants.h"
+
 
 @interface PJRadioButton : UIButton
 
--(void)activeState;
+-(void)highlightedBorderInactiveState;
+-(void)highlightedBorderActiveState;
 
--(void)inactiveState;
+-(void)buttonWithBeizerShadowActiveState;
+-(void)buttonWithBeizerShadowInactiveState;
 
+-(void)buttonWithShadowActive;
+-(void)buttonWithShadowInactive;
+
+-(void)buttonWithCircularSelectionActive;
+-(void)buttonWithCircularSelectionInactive;
 @end
